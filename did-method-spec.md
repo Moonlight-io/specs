@@ -13,7 +13,7 @@ The Vivid DID method specification conforms to the requirements specified in the
 
 ## Abstract
 
-Vivid is an SSI (Self-Sovereign Identity) solution designed to be platform agnostic. The Vivid solution is optimized for DIDs and Verifiable Credentials. This specification covers how these DIDs are managed and also describes related features.  This document is part of a collection of specifications which outline the Vivid ecosystem.
+[**Vivid**](https://vivid.moonlight.io/) is an SSI (Self-Sovereign Identity) solution designed to be platform agnostic. The Vivid solution is optimized for DIDs and Verifiable Credentials. This specification covers how these DIDs are managed and also describes related features.  This document is part of a collection of specifications which outline the Vivid ecosystem.
 
 ## Vivid DID Method
 
