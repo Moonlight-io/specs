@@ -1,11 +1,12 @@
- <p align="center">
-   <img
-     src="https://assets.moonlight.io/email/2020/Vivid_Logo_0.png"
-     height="100px;">
- </p>
+<p align="center">
+  <img
+    src="https://assets.moonlight.io/email/2020/Vivid_Logo_0.png"
+    height="100px;">
+</p>
  
- # Version
- 0.0.1
+# Version
+
+0.0.1
 
 # DID Method Specification
 
@@ -40,10 +41,9 @@ base58char = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "A" / "B" / "
     / "q" / "r" / "s" / "t" / "u" / "v" / "w" / "x" / "y" / "z"
 ```
 
-
 ### Namestring Generation Method
 
-The `namestring` can be generated in various ways using standard UUID methods and must be a valid base58 character string with length of 16-128. 
+The `namestring` can be generated in various ways using standard UUID methods and must be a valid base58 character string with length of 16-128.
 
 A convenient regex to match `namestring` is:
 
@@ -53,7 +53,7 @@ A convenient regex to match `namestring` is:
 
 ### Vivid DID Example
 
-A 33-byte arbitrary compressed public key: `035a928f201639204e06b4368b1a93365462a8ebbff0b8818151b74faab3a2b61a`(hex)   
+A 33-byte arbitrary compressed public key: `035a928f201639204e06b4368b1a93365462a8ebbff0b8818151b74faab3a2b61a`(hex)
 
 can be represented in base58 as: `znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX`(base58)
 
@@ -63,49 +63,48 @@ An example Vivid DID could be:
 did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX
 ```
 
-> <i>Note:</i> The assumption that a namestring is a base58 encoded publickey is not valid.
-
+> *Note:* The assumption that a namestring is a base58 encoded public key is not valid.
 
 ## Data Structure
 
 Vivid Identity documents use the following data schema to define a platform agnostic authentication solution:
 
-
 ```json
 {
-	"@context": ["https://w3id.org/security/v1"], //need to define
-	"id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-	"type": ["identity"],
-	"issued": "2020-12-21",
+  "@context": ["https://w3id.org/security/v1"],
+  "id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+  "type": ["identity"],
+  "issued": "2020-12-21",
     "authentication": [
         "#neo3",
         "#zilliqa",
-		"#neo3"
+        "#neo3"
     ],
     "keyAgreement": [
         "#neo3",
         "#zilliqa",
-		"#neo2"
+        "#neo2"
     ],
     "verification": [
-	{
-       "id": "#neo2",
-       "type": "secp256r1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-    },
-	{
-       "id": "#neo3",
-       "type": "secp256r1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-    },
-    {
-       "id": "#zilliqa",
-       "type": "secp256k1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
-    }]
+      {
+        "id": "#neo2",
+        "type": "secp256r1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+      },
+      {
+        "id": "#neo3",
+        "type": "secp256r1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+      },
+      {
+        "id": "#zilliqa",
+        "type": "secp256k1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
+      }
+    ]
   }
 ```
 
@@ -123,7 +122,7 @@ function CreateIdentity(vividSpecificIDString IDString, privateKey Buffer): unde
 
 Executing this method will create a verification entry for the keypair associated with the privateKey parameter.
 
->> *Note:* A DID record created using this method is be considered **Mandatory** for users of the ecosystem.
+> *Note:* A DID record created using this method is be considered **Mandatory** for users of the ecosystem.
 
 ### Read
 
@@ -134,6 +133,7 @@ function ReadIdentity(vividSpecificIDString IDString): DIDDocument
 ```
 
 #### For example:
+
 Querying for `did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX`:
 
 ```ts
@@ -144,39 +144,40 @@ Resolves:
 
 ```json
 {
-	"@context": ["https://w3id.org/security/v1"], //need to define
-	"id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-	"type": ["identity"],
-	"issued": "2020-12-21",
+  "@context": ["https://w3id.org/security/v1"],
+  "id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+  "type": ["identity"],
+  "issued": "2020-12-21",
     "authentication": [
         "#neo3",
         "#zilliqa",
-		"#neo3"
+        "#neo3"
     ],
     "keyAgreement": [
         "#neo3",
         "#zilliqa",
-		"#neo2"
+        "#neo2"
     ],
     "verification": [
-	{
-       "id": "#neo2",
-       "type": "secp256r1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-    },
-	{
-       "id": "#neo3",
-       "type": "secp256r1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-    },
-    {
-       "id": "#zilliqa",
-       "type": "secp256k1",
-       "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-       "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
-    }]
+      {
+        "id": "#neo2",
+        "type": "secp256r1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+      },
+      {
+        "id": "#neo3",
+        "type": "secp256r1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+      },
+      {
+        "id": "#zilliqa",
+        "type": "secp256k1",
+        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+        "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
+      }
+    ]
   }
 ```
 
@@ -208,11 +209,10 @@ This document is a work in progress.
 
 ## References
 
-1.  Decentralized Identifiers (DIDs) v0.11 https://w3c-ccg.github.io/did-spec
-1.  ABNF https://tools.ietf.org/html/rfc5234
-1.  Base58 Encoding https://en.wikipedia.org/wiki/Base58
-1.  Bitcoin Base58 Alphabet https://en.bitcoinwiki.org/wiki/Base58#Alphabet_Base58
-1.  Linked Data Cryptographic Suite Registry https://w3c-ccg.github.io/ld-cryptosuite-registry
-1.  Verifiable Claims https://www.w3.org/TR/verifiable-claims-data-model
-1.  Asteroid SDK for Vivid https://github.com/Moonlight-io/asteroid-sdk-js
-
+1. Decentralized Identifiers (DIDs) v0.11 https://w3c-ccg.github.io/did-spec
+1. ABNF https://tools.ietf.org/html/rfc5234
+1. Base58 Encoding https://en.wikipedia.org/wiki/Base58
+1. Bitcoin Base58 Alphabet https://en.bitcoinwiki.org/wiki/Base58#Alphabet_Base58
+1. Linked Data Cryptographic Suite Registry https://w3c-ccg.github.io/ld-cryptosuite-registry
+1. Verifiable Claims https://www.w3.org/TR/verifiable-claims-data-model
+1. Asteroid SDK for Vivid https://github.com/Moonlight-io/asteroid-sdk-js
