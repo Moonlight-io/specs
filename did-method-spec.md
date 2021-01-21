@@ -82,7 +82,7 @@ Vivid Identity documents use the following data schema to define a platform agno
   "authentication":[
     "#neo3",
     "#zilliqa",
-    "#neo3"
+    "#neo2"
   ],
   "keyAgreement":[
     "#neo3",
@@ -159,7 +159,7 @@ Resolves:
   "authentication":[
     "#neo3",
     "#zilliqa",
-    "#neo3"
+    "#neo2"
   ],
   "keyAgreement":[
     "#neo3",
