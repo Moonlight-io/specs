@@ -203,6 +203,12 @@ function DeleteVerification(vividSpecificIDString IDString, verificationID strin
 
 This transaction is approved if the invoking privateKey can authenticate against the authentication methods registered for the targeted IDString.
 
+## Security and Privacy Considerations
+
+Vivid DID documents should be limited to verification and do not contain Personally-Identifiable Information (PII).  
+
+DID documents use owner generated signature (with private key) to prevent malicious error correction.
+
 ## Status
 
 This document is a work in progress.
