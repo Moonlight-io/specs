@@ -71,41 +71,45 @@ Vivid Identity documents use the following data schema to define a platform agno
 
 ```json
 {
-  "@context": ["https://w3id.org/security/v1"],
-  "id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-  "type": ["identity"],
-  "issued": "2020-12-21",
-    "authentication": [
-        "#neo3",
-        "#zilliqa",
-        "#neo3"
-    ],
-    "keyAgreement": [
-        "#neo3",
-        "#zilliqa",
-        "#neo2"
-    ],
-    "verification": [
-      {
-        "id": "#neo2",
-        "type": "secp256r1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-      },
-      {
-        "id": "#neo3",
-        "type": "secp256r1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-      },
-      {
-        "id": "#zilliqa",
-        "type": "secp256k1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
-      }
-    ]
-  }
+  "@context":[
+    "https://w3id.org/security/v1"
+  ],
+  "id":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+  "type":[
+    "identity"
+  ],
+  "issued":"2020-12-21",
+  "authentication":[
+    "#neo3",
+    "#zilliqa",
+    "#neo3"
+  ],
+  "keyAgreement":[
+    "#neo3",
+    "#zilliqa",
+    "#neo2"
+  ],
+  "verification":[
+    {
+      "id":"#neo2",
+      "type":"secp256r1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+    },
+    {
+      "id":"#neo3",
+      "type":"secp256r1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+    },
+    {
+      "id":"#zilliqa",
+      "type":"secp256k1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
+    }
+  ]
+}
 ```
 
 ## CRUD Operation Definitions
@@ -144,41 +148,45 @@ Resolves:
 
 ```json
 {
-  "@context": ["https://w3id.org/security/v1"],
-  "id": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-  "type": ["identity"],
-  "issued": "2020-12-21",
-    "authentication": [
-        "#neo3",
-        "#zilliqa",
-        "#neo3"
-    ],
-    "keyAgreement": [
-        "#neo3",
-        "#zilliqa",
-        "#neo2"
-    ],
-    "verification": [
-      {
-        "id": "#neo2",
-        "type": "secp256r1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-      },
-      {
-        "id": "#neo3",
-        "type": "secp256r1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
-      },
-      {
-        "id": "#zilliqa",
-        "type": "secp256k1",
-        "controller": "did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
-        "publicKeyBase58": "25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
-      }
-    ]
-  }
+  "@context":[
+    "https://w3id.org/security/v1"
+  ],
+  "id":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+  "type":[
+    "identity"
+  ],
+  "issued":"2020-12-21",
+  "authentication":[
+    "#neo3",
+    "#zilliqa",
+    "#neo3"
+  ],
+  "keyAgreement":[
+    "#neo3",
+    "#zilliqa",
+    "#neo2"
+  ],
+  "verification":[
+    {
+      "id":"#neo2",
+      "type":"secp256r1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+    },
+    {
+      "id":"#neo3",
+      "type":"secp256r1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX"
+    },
+    {
+      "id":"#zilliqa",
+      "type":"secp256k1",
+      "controller":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
+      "publicKeyBase58":"25SYHxFftEWxtemFzyy1tWWbGT1ynNVQg88GPuX8YfH1W"
+    }
+  ]
+}
 ```
 
 ### Update
