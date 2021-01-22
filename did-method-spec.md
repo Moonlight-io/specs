@@ -205,9 +205,11 @@ This transaction is approved if the invoking privateKey can authenticate against
 
 ## Security and Privacy Considerations
 
-Vivid DID documents should be limited to verification and do not contain Personally-Identifiable Information (PII).  
+Vivid is an open standard designed to be robust against a broad range of ecosystem requirements.  As a result, this solution makes no claims about the security and privacy of platforms that choose to use this DID Method.
 
-DID documents use owner generated signature (with private key) to prevent malicious error correction.
+It is important for integrators and their users to understand that this method is designed to operate on a collection of immutable DLT platforms.  Once a DID document is initiated on the platform, the data cannot be removed in a non-recoverable way.  All states of a DID document **WILL** be available in perpetuity irrelevant of the use of the `delete` operation due to the intrinsic nature of the platforms which Vivid operates on. 
+
+Due to this behavior, Vivid DID documents should be limited to verification/authentication operations and **SHOULD NOT** contain any Personally-Identifiable Information (PII).  
 
 ## Status
 
