@@ -71,9 +71,6 @@ Vivid Identity documents use the following data schema to define a platform agno
 
 ```json
 {
-  "@context":[
-    "https://w3id.org/security/v1"
-  ],
   "id":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
   "type":[
     "identity"
@@ -148,9 +145,6 @@ Resolves:
 
 ```json
 {
-  "@context":[
-    "https://w3id.org/security/v1"
-  ],
   "id":"did:vivid:znWRVY1GSUSjJEFqD8hRBc6s68qkQ9MGsaSRNZc8ZaMX",
   "type":[
     "identity"
